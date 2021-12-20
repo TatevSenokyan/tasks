@@ -262,3 +262,119 @@ export default function App () {
 
 
 }
+
+
+// const Profile = () => {
+//     const classes = ProfileStyled();
+
+//   return (
+//      <Box 
+//      sx={{
+//          marginTop:20,
+//          width: '100%',
+//          display:'flex',
+//          justifyContent:'center' 
+//      }}
+//      >
+        
+//        <Box 
+//         sx={{
+//         display:'flex',
+//         flexDirection:'column'
+//       }}
+       
+//        >
+//            <Box className={classes.mainProfile}>
+//               <Box sx={{
+//                   width:275,
+//                   justifyContent:'space-between',
+//                   display:'flex',
+                  
+//               }}>
+//                 <Box  mt={10} sx={{display:'flex', justifyContent:'space-between',  width:'100%'}}>
+//                   <Box component={'img'}  src={profileImg} alt="picture" width={65}/>
+//                   <Box sx={{display:'flex',flexDirection:'column', width:117, height:61, margin:'2px 12px'}}>
+//                   <Typography className={classes.profileName}>fnxitodd_shots</Typography>
+//                   <Typography className={classes.profileDesc}>Dark Winners</Typography>
+//                   <Typography sx={{display:'flex', alignItems:'center', fontFamily: 'Forza',fontSize: 12,textTransform: 'capitalize',color: '#FFFFFF',
+//                    marginTop:2}}>
+//                      <Box mr={1}  sx={{width:8, height:8, borderRadius:'50%',backgroundColor:' #59B015'}}></Box>
+//                       <span style={{opacity:0.6}}>Now Online</span>
+//                   </Typography>
+//                 </Box>
+//                 <Box  className={classes.level}>
+//                    <Typography className={classes.levelNumber}>58</Typography>
+//                    <Typography className={classes.levelText}>Level</Typography>
+//                 </Box>
+//                  </Box>
+//               </Box>
+//               <Box component={'img'} src={lineImg} mt={'30px'}/> 
+
+//               <Box className={classes.buttonsContainer}>
+//                  <Box className={classes.topButtonsContainer}>
+//                    <Box className={classes.topButtons}>
+//                       <Box className={classes.firstFollowingButton}></Box>
+//                       <Box className={classes.firstNumberButton}></Box>
+                    
+//                    </Box>
+//                    <Box>
+//                        <Box></Box>
+//                        <Box></Box>
+//                    </Box>
+//                  </Box>
+//                  <Box className={classes.bottomButtonsContainer}>
+//                    <Box className={classes.topButtons}>
+//                       <Box className={classes.firstButton}></Box>
+//                       <Box className={classes.secondButton}></Box>
+                    
+//                    </Box>
+//                    <Box>
+//                        <Box></Box>
+//                        <Box></Box>
+//                    </Box>
+//                  </Box>
+//                  <Box>
+                     
+//                  </Box>
+
+//               </Box>
+//            </Box>
+
+//            <Box width={335}>
+//                  <Grid className={classes.gridItem} xs={12} mt={5} width={275}>
+//                     <Box sx={{width:64,height:98, display:'flex',flexDirection:'column', justifyContent:'center',alignItems:'center'}}>
+//                         <Box component={'img'} src={killImg} alt='kill' width={44}/>
+//                         <Typography className={classes.gridItemNumber}>1.965</Typography>
+//                         <Typography className={classes.gridItemText}>KILL</Typography>
+//                     </Box>
+//                  </Grid>
+//                  <Grid className={classes.gridItem} xs={12} mt={5}>
+//                  <Box sx={{width:64,height:98, display:'flex',flexDirection:'column', justifyContent:'center',alignItems:'center'}}>
+//                         <Box component={'img'}  src={deathImg} alt='kill' width={44}/>
+//                         <Typography className={classes.gridItemNumber}>456</Typography>
+//                         <Typography className={classes.gridItemText}>DEATH</Typography>
+//                     </Box>
+//                 </Grid>
+//                 <Grid className={classes.gridItem} xs={12} mt={5}>
+//                 <Box sx={{width:64,height:98, display:'flex',flexDirection:'column', justifyContent:'center',alignItems:'center'}}>
+//                         <Box component={'img'} src={assistImg} alt='kill' width={44}/>
+//                         <Typography className={classes.gridItemNumber}>745</Typography>
+//                         <Typography className={classes.gridItemText}>ASSIST</Typography>
+//                     </Box>
+//                 </Grid>
+//                 <Grid className={classes.gridItem} xs={12} mt={5}>
+//                      <Box sx={{width:64,height:98, display:'flex',flexDirection:'column', justifyContent:'center',alignItems:'center'}}>
+//                         <Box component={'img'}  src={kdrImg} alt='kill' width={44}/>
+//                         <Typography className={classes.gridItemNumber}>2.94</Typography>
+//                         <Typography className={classes.gridItemText}>KDR</Typography>
+//                     </Box>
+//                 </Grid>
+//             </Box>
+//        </Box>
+      
+
+//      </Box>
+//   )
+// };
+
+// export default Profile;
