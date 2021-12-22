@@ -378,3 +378,132 @@ export default function App () {
 // };
 
 // export default Profile;
+
+
+function createData(name, calories, fat, carbs, protein, price) {
+  return {
+    name:<><span>{name}</span><br></br><span>{calories}</span></>,
+    calories,
+    history: [
+      {
+        date: '2020-01-05',
+        customerId: '11091700',
+        amount: 3,
+      },
+      {
+        date: '2020-01-02',
+        customerId: 'Anonymous',
+        amount: 1,
+      },
+    ],
+  };
+}
+
+function Row(props) {
+  const classes=useStyles()
+  const { row } = props;
+  const [open, setOpen] = React.useState(false);
+
+  return (
+    <React.Fragment>
+      <TableRow classes={{root:classes.root}} sx={{ '& > *': {border:'1px solid transparent',boxSizing:'border-box',  background:props.index%2==0?'rgba(255, 255, 255, 0.05)':'',marginLeft:'90px !important'} }}>
+        <TableCell >
+          {/* <IconButton
+            aria-label="expand row"
+            size="small"
+            onClick={() => setOpen(!open)}
+          >
+            {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
+          </IconButton> */}
+        </TableCell>
+        <TableCell component="th" scope="row">
+          {row.name}
+        </TableCell>
+        <TableCell align="right">{row.calories}</TableCell>
+        <TableCell align="right">{row.fat}</TableCell>
+        
+      </TableRow>
+      {/* <TableRow>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <Box sx={{ margin: 1 }}>
+              <Typography variant="h6" gutterBottom component="div">
+                History
+              </Typography>
+              <Table size="small" aria-label="purchases">
+                <TableHead>
+                  <TableRow>
+                    <TableCell>Date</TableCell>
+                    <TableCell>Customer</TableCell>
+                    <TableCell align="right">Amount</TableCell>
+                    <TableCell align="right">Total price ($)</TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  {row.history.map((historyRow) => (
+                    <TableRow key={historyRow.date}>
+                      <TableCell component="th" scope="row">
+                        {historyRow.date}
+                      </TableCell>
+                      <TableCell>{historyRow.customerId}</TableCell>
+                      <TableCell align="right">{historyRow.amount}</TableCell>
+                      <TableCell align="right">
+                        {Math.round(historyRow.amount * row.price * 100) / 100}
+                      </TableCell>
+                    </TableRow> */}
+                  {/* ))}
+                </TableBody>
+              </Table>
+            </Box>
+          </Collapse>
+        </TableCell>
+      </TableRow> */}
+    </React.Fragment>
+  );
+}
+
+Row.propTypes = {
+  row: PropTypes.shape({
+    calories: PropTypes.number.isRequired,
+    carbs: PropTypes.number.isRequired,
+    fat: PropTypes.number.isRequired,
+    history: PropTypes.arrayOf(
+      PropTypes.shape({
+        amount: PropTypes.number.isRequired,
+        customerId: PropTypes.string.isRequired,
+        date: PropTypes.string.isRequired,
+      }),
+    ).isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.number.isRequired,
+    protein: PropTypes.number.isRequired,
+  }).isRequired,
+};
+
+const rows = [
+  createData(`Mode`, 159),
+  createData('Mode', 159),
+  createData('Mode', 159),
+  createData('Mode', 159),
+  createData('Mode', 159),
+  createData('Mode', 159),
+
+];
+
+export default function CollapsibleTable() {
+  return (
+    <TableContainer sx={{textAlign:'center',width:335, height:930, margin:'auto', backgroundSize:'cover',backgroundImage:`url(${backgroundImg})`}} >
+      <h1>last match</h1>
+      <hr></hr>
+      <Table sx={{margin:'auto', width:275}} aria-label="collapsible table">
+       
+        <TableBody>
+          {rows.map((row,index) => (
+            <Row key={row.name} row={row} index={index} />
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
+  );
+}
+
